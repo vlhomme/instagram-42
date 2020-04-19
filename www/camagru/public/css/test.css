@@ -1,0 +1,290 @@
+/* recovery link */
+.link_recovery {
+    font-size: smaller;
+    cursor: pointer;
+}
+
+.alert_forgoten_form {
+    text-align: center;
+}
+.change_pass_formu {
+    text-align: center;
+}
+
+.message_info_temp {
+    cursor: default;
+}
+
+.plop2{
+    width: 100%;
+    display: flex;
+}
+
+.plop {
+    margin-right: auto;
+    margin-left: auto;
+    /* justify-content:  */
+    /* margin: 1em auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+/* The three panels */
+input:invalid {
+    box-shadow: none;
+}
+.test {
+    background-size: cover;
+    height: 40em;
+    max-width: 40em;
+    min-width: 360px;
+    overflow: hidden;
+    margin: 10em auto;
+    font-family: 'Archivo', sans-serif;
+}
+
+.static-1 {
+    background-color: white;
+    height: 20em;
+    overflow: hidden;
+    transform: translateY(0em);
+    text-align: center;
+}
+
+.static-2 {
+    background-color: white;
+    height: 20em;
+    overflow: hidden;
+    transform: translateY(20em);
+    text-align: center;
+}
+
+/* SEPARATION LINE */
+
+.first-line {
+    margin: 2em 3.8em;
+    margin-bottom: 1em;
+}
+
+.second-line {
+    margin: 1em 3.8em;
+    margin-bottom: 3px;
+}
+
+/* Aller en Haut Aller en Bas */
+.fleche {
+    font-size: smaller;
+    margin-top: 2em;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.ico {
+    height: 1em;
+    margin-top: 5px;
+}
+.ico2 {
+    margin-top: 8px;
+    height: 1em;
+}
+
+.fleche-ico {
+    width: 3%;
+    height: auto;
+    cursor: pointer;
+}
+
+.fleche-ico2 {
+    width: 3%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* TITRE */
+
+.titre {
+    background-color: black;
+    color: white;
+    margin-left: 33%;
+    margin-right: 33%;
+    /* font-size: 3em; */
+    border-radius: 15px;
+}
+
+.h1titre {
+    font-weight: lighter;
+    transform: scale(0.9, 1);
+}
+
+/* FORM */
+
+.form {
+    text-align: left;
+    margin: 0 4em 0;
+}
+
+form p {
+    display: -webkit-flex;
+    white-space: pre-wrap;
+}
+
+input {
+    -webkit-flex: 1;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgb(180, 216, 222);
+    padding: 3px 0px 3px 3px;
+    border: 1px solid rgb(180, 216, 222);
+}
+
+input[type=text] {
+    min-width: 20px;
+}
+
+input[type=submit] {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px 15px; 
+    background:black; 
+    color: white;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.input {
+    /* margin: 0 10em; */
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+.truc {
+    /* padding: 1em; */
+}
+
+/* Fonts */
+.IBMfont {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.ArchivoFont {
+    font-family: 'Archivo', sans-serif;
+}
+
+.RailewayFont {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ANIMATION */
+/*picture*/
+.anim-1 {
+    animation: anim-1 1s;
+}
+
+@keyframes anim-1 {
+    0% {
+        transform: translateY(0em);
+    }
+    100% {
+        transform: translateY(-20em);
+    }
+}
+
+.anim-2 {
+    animation: anim-2 1s;
+}
+
+@keyframes anim-2 {
+    0% {
+        transform: translateY(20em);
+    }
+    100% {
+        transform: translateY(0em);
+    }
+}
+
+.anim-3 {
+    animation: anim-3 1s;
+}
+
+@keyframes anim-3 {
+    0% {
+        transform: translateY(-20em);
+    }
+    100% {
+        transform: translateY(0em);
+    }
+}
+
+.anim-4 {
+    animation: anim-4 1s;
+}
+
+@keyframes anim-4 {
+    0% {
+        transform: translateY(0em);
+    }
+    100% {
+        transform: translateY(20em);
+    }
+}
+/*fleche bas*/
+.testou {
+    animation: test 0.2s;
+}
+@keyframes test {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*modal alert */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(40,40,40,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .message_info_temp{
+      background-color: white;
+      border-radius: 5%;
+      height: 200px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      padding: 1em;
+  }
+
+  @media screen and (max-height: 900px) {
+      .test {
+        margin: 5em auto;
+      }
+  }
+
+  @media screen and (max-height: 800px) {
+    .test {
+      margin: 0em auto;
+    }
+}

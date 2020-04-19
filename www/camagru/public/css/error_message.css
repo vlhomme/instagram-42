@@ -1,0 +1,36 @@
+body {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c6c6c6;
+    flex-flow: column;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.container a {
+    text-decoration: none;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Post</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:Thin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:Light&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/edit2.css'>
+    <link rel="shortcut icon" href="/img/ico/favicon.png" type="image/x-icon"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="magic_wand">
+            <img src="img/ico/camera.png" class="ico_magic_wand">
+        </div>
+
+        <div class="picture_preview">
+            <div class='sticker'>
+                    <img style="display: none" src="">
+            </div>
+            <video id="video" width="100%"></video>
+            <!-- width="100%" -->
+            
+            <!-- <img src="img/profile_pic_jo.jpg"> -->
+        </div>
+        <a href="#" id="capture" class="booth-capture-button">prendre Photo</a>
+        <a href="#" id="suivant" class="booth-capture-button">suivant</a>
+        <a href="/?go_back=true" id="tout_annuler" class="booth-capture-button">revenir à la navigation</a>
+        <a href="#" id="deco" class="booth-capture-button">Déconnexion</a>
+
+        <canvas id="canvas" width="800" height="600" style="display: none"></canvas>
+
+        <div class="filter_list">
+            <div class="filter-wrap">
+                <p class="filtername">
+                    aucun
+                </p>
+                <div class="filter">
+                    <img src="img/ico/white_square.png">
+                </div>
+            </div>
+            <?php
+
+            foreach ($stickers as $sticker) {
+                $sticker_name = substr($sticker, 16);
+                $sticker_name = substr($sticker_name, 0, -4);
+                echo "<div class='filter-wrap'>
+                    <p class='filtername'>$sticker_name</p>
+                    <div class=\"filter\"><img src=\"$sticker\"></div>
+                    </div>";
+            }
+
+            ?>
+            
+ 
+        </div>
+
+        <section class="post-list">
+            <?php 
+            foreach ($posts as $post) {
+                $path = $post->path;
+                if (substr($path, 0, 5) === 'https'){
+                    $path = substr_replace($path, "", -1);
+                }
+                echo "<a class='post'>
+                    <img src='$path' alt='image'>
+                    </a>
+                ";
+            }
+            ?>
+
+            <!-- <a class="post">
+                <img src="" alt="image">
+            </a> -->
+        </section>
+    </div>
+    <script src='script/edit2.js'></script>
+</body>
+</html>

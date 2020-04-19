@@ -1,0 +1,53 @@
+version: "3.1"
+services:
+    www:
+        build: .
+        container_name: app
+        ports: 
+            - "8001:80"
+            - "443:443"
+        volumes:
+            # - C:\Users\Nepriel\Desktop\New\www:/var/www/html/
+            - ~/Desktop/New/www:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql:8.0
+        container_name: db
+        restart: always
+        tty: true
+        ports: 
+            - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password --innodb-use-native-aio=0
+        environment:
+            MYSQL_DATABASE: CAMAGRU
+            MYSQL_USER: user
+            MYSQL_PASSWORD: 123456
+            MYSQL_ROOT_PASSWORD: 123456 
+        volumes:
+            - ~/Desktop/New/dump:/docker-entrypoint-initdb.d
+            - ~/Desktop/New/conf:/etc/mysql/conf.d
+            # - C:\Users\Nepriel\Desktop\New\dump:/docker-entrypoint-initdb.d
+            # - C:\Users\Nepriel\Desktop\New\conf:/etc/mysql/conf.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        container_name: phpmyadmin
+        restart: always
+        tty: true
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: 123456
+            MYSQL_ROOT_PASSWORD: 123456
+volumes:
+    persistent:
+    
+#ALTER USER 'root' IDENTIFIED WITH mysql_native_password by '123456';

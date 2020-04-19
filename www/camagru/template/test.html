@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Instagram</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:Thin&display=swap" rel="stylesheet"> 
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/test.css'>
+    <link rel="shortcut icon" href="/img/ico/favicon.png" type="image/x-icon"/>
+</head>
+<body>
+    <div class="test">
+        <div class="truc static-1">
+            <div class="inner-1">
+                <div class="titre RailewayFont">
+                    <h1 class="h1titre">PIC.ONE</h1>
+                </div>
+                <hr class="first-line">
+                <div class="form">
+                    <form name="connect" method="post" action="index.php">
+                        <p>ID : <input required type="text" name="pseudo" class="pseudo_html_input_connect"
+                                value="<?php echo $str = empty($pseudo) ? $defaultPseudo : $pseudo ?>"></p>
+                        <p>Pass : <input required type="password" name="pass" class="pass_html_input_connect"
+                                value="<?php echo $str = empty($pass) ? $defaultPass : $pass ?>"></p>
+                        <p class="input"><input class="connection_button" type="submit" value="Se connecter" /></p>
+                    </form>
+                </div>
+                <hr class="second-line">
+                <a class="js-forgoten link_recovery">mot de passe oublié ?</a>
+                <p class=fleche>Créer un compte</p>
+                <div class="ico">
+                        <img class="fleche-ico" src="/img/ico/down.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="truc static-2">
+            <div class="inner-2">
+                    <div class="ico2">
+                            <img class="fleche-ico2" src="/img/ico/up.png"/>
+                    </div>
+                <div class="form">
+                    <form name="register" method="post" action="index.php">
+                        <p>Entrez votre pseudo : <input required type="text" name="pseudo" class="pseudo_html_input_register"
+                                value="<?php echo $str = empty($pseudo) ? $defaultPseudo : $pseudo ?>"></p>
+                        <p>Entrez votre prenom : <input required type="text" name="prenom" class="prenom_html_input_register"
+                                value="<?php echo $str = empty($prenom) ? $defaultPrenom : $prenom ?>"></p>
+                        <p>Entrez votre nom : <input required type="text" name="nom" class="nom_html_input_register"
+                                value="<?php echo $str = empty($nom) ? $defaultNom : $nom ?>">
+                        </p>
+                        <p>Entrez votre mail : <input required type="text" name="mail" class="mail_html_input_register"
+                                value="<?php echo $str = empty($mail) ? $defaultMail : $mail ?>"></p>
+                        <p>Entrez votre mot de passe : <input required type="password" name="pass" class="pass_html_input_register"
+                                value="<?php echo $str = empty($pass) ? $defaultPass : $pass ?>"></p>
+                        <p class="input"><input type="submit" value="Valider" class="registration_button" /></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="plop">
+        <a  href="/?gallery=true">apperçu</a>
+    </div>
+    <!-- <a class="plop" href="/?gallery=true">prout</a> -->
+    <div class="modal js-alert" style="display: none">
+        <div class="message_info_temp js-modal-stop">
+            error message
+        </div>
+    </div>
+    <script src='script/test.js'></script>
+</body>
+</html>

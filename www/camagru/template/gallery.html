@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Instagram</title>
+    <linkhref="https://fonts.googleapis.com/css?family=Source+Sans+Pro"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway:Thin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:Light&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/feed.css'>
+    <link rel="shortcut icon" href="/img/ico/favicon.png" type="image/x-icon"/>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <div class="header_test">
+      <div class="logo_title">
+        Logo | Pic One
+      </div>
+      <?php
+      if (isset($_SESSION['pseudo'])) {
+        echo "<div class=\"logo_nav_bar\">
+          <img class=\"take_me_to_editing\" src=\"img/ico/camera.png\">
+        </div>
+        ";
+      }
+      ?>
+      
+      <?php
+      if (isset($_SESSION['pseudo'])) {
+        echo '       <div class="logo_nav_bar">
+          <img src="img/ico/compass.png">
+        </div>
+        ';
+        echo "<div class='logo_nav_bar'>
+          <img class='js_takeMeToMe' src=\"img/ico/user.png\">
+      </div>";
+      echo '<div class="logo_nav_bar">
+        <img class=\'js_takeMeToConnect\' src="img/ico/cross.png">
+    </div>';
+      } else {
+        echo '<div class="logo_nav_bar">
+          <a href="/"><img src="img/ico/previous.png"></a>
+        </div>
+        ';
+      }
+      ?>
+
+    </div>
+    <hr class="separate_nav">
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="post-list">
+    <div>
+
+    </div>
+    <div class="contain-loader">
+      <div class="nb-spinner">
+    
+      </div>
+    </div>
+    <div>
+
+    </div>
+    <img class="toggle_for_post_display"src="img/ico/to_have_grey.png"/>
+  </section>
+</div>
+<script src="script/gallery.js"></script>
+</body>
+</html>
