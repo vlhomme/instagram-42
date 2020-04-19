@@ -59,9 +59,15 @@ while ($i < 35) {
     $prenom = ucfirst(strtolower($prenom));
     $raw_data = file_get_contents("https://fr.wikipedia.org/w/api.php?action=opensearch&search=$prenom");
     $php_data = json_decode($raw_data);
-    $ran2 = rand(1, count ($php_data[1]) - 1);
-    $pseudo = $php_data[1][$ran2];
-    $description = $php_data[2][$ran2];
+    if ($php_data === null || !$php_data){
+        $pseudo = 'philip katrinn';
+        $description = 'je suis un gros thug de la culture';
+        // die();
+    } else {
+        $ran2 = rand(1, count ($php_data[1]) - 1);
+        $pseudo = $php_data[1][$ran2];
+        $description = $php_data[2][$ran2];
+    }
 
     if (substr($pseudo, 0, strpos($pseudo, ' ')) === '') {
         $firstname = $pseudo;

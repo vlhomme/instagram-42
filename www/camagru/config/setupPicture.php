@@ -33,26 +33,30 @@ $ret = $pdo->execute($picture_table_query, []);
 </style>
 <?php
 
-$pommier = file_get_contents('../config/picture-first-test.json');
-$biblio_image = json_decode($pommier);
+// $pommier = file_get_contents('../config/picture-first-test.json');
+// $biblio_image = json_decode($pommier);
 $pdo = new BasicQuery($db);
 $query = "SELECT * FROM users WHERE id > 3";
 $ret = $pdo->execute($query, [])->fetchAll(\PDO::FETCH_ASSOC);
+$number = 0;
 foreach ($ret as $e){
     for ($i = 0; $i < 10; $i++) {
-
+        $number++;
+        echo('***************');
+        var_dump($number);
+        echo('<br/>');
         $now = new DateTime("now -3 year");
         $threeYearsAgo = new DateTime("now -4 year");
         $random_date = Date_Operation::randomDateInRange($threeYearsAgo, $now);
         $timestamp_for_comment = $random_date->getTimestamp();
         $date_for_picture = date('Y-m-d G:i:s', $timestamp_for_comment);
 
-        $ran = rand(0, count($biblio_image) - 1);
-        preg_match('/src=".+"/', $biblio_image[$ran], $matches);
-        $path = substr($matches[0], 5);
-        substr_replace($path ,"", -1);
+        // $ran = rand(0, count($biblio_image) - 1);
+        // preg_match('/src=".+"/', $biblio_image[$ran], $matches);
+        // $path = substr($matches[0], 5);
+        // substr_replace($path ,"", -1);
         $picture = new Picture();
-        $picture->Add($db, $path, $e['id'], $date_for_picture);
+        $picture->Add($db, "https://i.picsum.photos/id/$number/400/400.jpg", $e['id'], $date_for_picture);
         echo $picture->ToHTML('square');
     }
 }
