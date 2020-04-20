@@ -31,8 +31,7 @@ This is an instagram like application that has 3 main features :
 ### 1. User Features
 A user can register. A mail of confirmation is send to validate his registration. A user can login. A user can modify his information and password once login. A user can reset his password if he forgets it with his mail address.
 ### 2. Gallery Features
-A public gallery is available without connection needed (with infinite pagination of all the pictures in the website). Each user has its own gallery. Any user, once login can comment and like any pictures. He can also like comments.
+A public gallery is available without connection needed (with infinite pagination of all the pictures in the website). Each user has its own gallery. Any user, once login can comment and like any pictures. He can also like comments. A user can only delete his comments/likes/posts.
 ![](insta3.gif)
 ### 3. Editing Features
-A user can take a picture with his webcam then 
-
+A user can take a picture with his webcam or upload an image from his computer. He can then add a sticker and/or a filter to the picture.
