@@ -40,8 +40,8 @@ For more information about the project please see the pdf subject available in f
 
 ### How do I run it on my laptop ?
 You will need docker running on your machine.
-- If you are on mac or linux just clone the repo cd into the repo and run deploiement.sh.
-- If you are on windows you will need to create a new folder in yout desktop called 'new' then copy the 'www' ![www](https://github.com/nepriel/instagram-42/tree/master/www) folder in it. You will need to change this file a bit according to your windows username ![docker-compose](https://github.com/nepriel/instagram-42/blob/master/www/camagru/DOCKER/docker-compose.yml) like this :
+- If you are on mac or linux just clone the repo cd into the repo and run `sh deploiement.sh`.
+- If you are on windows you will need to create a new folder in yout desktop called 'new' then copy the ![www](https://github.com/nepriel/instagram-42/tree/master/www) folder in it. You will need to change this file a bit according to your windows username ![docker-compose](https://github.com/nepriel/instagram-42/blob/master/www/camagru/DOCKER/docker-compose.yml) like this :
 ```
         volumes:
             - C:\Users\myusername\Desktop\New\www:/var/www/html/
@@ -55,4 +55,6 @@ You will need docker running on your machine.
             - C:\Users\myusername\Desktop\New\conf:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
 ```
+Then just cd into ![www/camagru/DOCKER](https://github.com/nepriel/instagram-42/tree/master/www/camagru/DOCKER) and run `docker-compose up`.
+Once your server is running on any OS go to your webbrowser and type localhost:8001 in your url. Then wait a bit. The database is being seeded from wikipedia and others to generate fake users.
 ![alt text](https://github.com/nepriel/instagram-42/blob/master/hello.PNG "result of evaluation of project")
