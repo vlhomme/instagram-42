@@ -41,7 +41,7 @@ For more information about the project please see the pdf subject available in f
 ### How do I run it on my laptop ?
 You will need docker running on your machine.
 - If you are on mac or linux just clone the repo cd into the repo and run deploiement.sh.
-- If you are on windows you will need to create a new folder in yout desktop called 'new' then copy the 'www' ![www](https://github.com/nepriel/instagram-42/tree/master/www) folder in it. You will need to change this file a bit according to your windows username ![docker-compose(]https://github.com/nepriel/instagram-42/blob/master/www/camagru/DOCKER/docker-compose.yml) like this :
+- If you are on windows you will need to create a new folder in yout desktop called 'new' then copy the 'www' ![www](https://github.com/nepriel/instagram-42/tree/master/www) folder in it. You will need to change this file a bit according to your windows username ![docker-compose](https://github.com/nepriel/instagram-42/blob/master/www/camagru/DOCKER/docker-compose.yml) like this :
 ```
         volumes:
             - C:\Users\myusername\Desktop\New\www:/var/www/html/
