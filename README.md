@@ -35,4 +35,7 @@ A public gallery is available without connection needed (with infinite paginatio
 ![](insta3.gif)
 ### 3. Editing Features
 A user can take a picture with his webcam or upload an image from his computer. He can add a sticker (live preview with the webcam) or/and a filter to his picture before publishing it.
+
+For more information about the project please see the pdf subject available in french and english at ![alt text](https://github.com/nepriel/instagram-42/tree/master/subject "subject").
+
 ![alt text](https://github.com/nepriel/instagram-42/blob/master/hello.PNG "result of evaluation of project")
