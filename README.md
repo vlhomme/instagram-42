@@ -1,4 +1,3 @@
-# instagram-42
 # My very first big project
 ![](insta1.gif)
 ## How long did it take ?
@@ -11,6 +10,7 @@
   * responsive design and advanced CSS tricks
   * authentication process in backend and frontend
   * docker LAMP
+  * a feel of what should be a REST api and implementation of CRUD
   * how to send email with php
   * how to handle webcam, upload images and edit them with php and javascript
 ![](insta2.gif)
