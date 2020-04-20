@@ -34,4 +34,5 @@ A user can register. A mail of confirmation is send to validate his registration
 A public gallery is available without connection needed (with infinite pagination of all the pictures in the website). Each user has its own gallery. Any user, once login can comment and like any pictures. He can also like comments. A user can only delete his comments/likes/posts.
 ![](insta3.gif)
 ### 3. Editing Features
-A user can take a picture with his webcam or upload an image from his computer. He can then add a sticker and/or a filter to the picture.
+A user can take a picture with his webcam or upload an image from his computer. He can add a sticker (live preview with the webcam) or/and a filter to his picture before publishing it.
+![alt text](hello.png "result of evaluation of project")
