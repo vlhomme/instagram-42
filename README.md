@@ -4,9 +4,9 @@
 2 months
 
 ## challenge accepted ?
-- [x] no framework
-- [x] no external libraries
-- [x] just vanilla php javascript and css
+- [x] no framework and no external libraries : just vanilla php javascript and css
+- [x] own local webserver using docker compatible with any os
+- [x] no security breaks (SQL injection,  good Access Control with different user roles, XSS, no CORS error, file upload ...)
 
 ## What did I learn ?
   * object-oriented programming in php
